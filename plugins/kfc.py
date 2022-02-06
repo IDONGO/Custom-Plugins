@@ -24,67 +24,7 @@ async def gen(message: Message):
 			except YouBlockedUser:
 				await message.err(f"**{ERROR_MSG}**", del_in=5)
 				return 
-			msgs = await conv.get_response(timeout=30, mark_read=True)
-			if "Wait" in msgs.text:
-				time.sleep(1)
-				msgs = await conv.get_response(timeout=30, mark_read=True) 
-				if "Wait" in msgs.text:
-					time.sleep(1)
-					msgs = await conv.get_response(timeout=30, mark_read=True) 
-					if "Wait" in msgs.text:
-						time.sleep(1)
-						msgs = await conv.get_response(timeout=30, mark_read=True) 
-						if "Wait" in msgs.text:
-							time.sleep(1)
-							msgs = await conv.get_response(timeout=30, mark_read=True)
-							if "Wait" in msgs.text:
-								time.sleep(1)
-								msgs = await conv.get_response(timeout=30, mark_read=True)
-								if "Wait" in msgs.text:
-									time.sleep(1)
-									msgs = await conv.get_response(timeout=30, mark_read=True)
-									if "Wait" in msgs.text:
-										time.sleep(1)
-										msgs = await conv.get_response(timeout=30, mark_read=True)
-										if "Wait" in msgs.text:
-											time.sleep(1)
-											msgs = await conv.get_response(timeout=30, mark_read=True)
-											if "Wait" in msgs.text:
-												time.sleep(1)
-												msgs = await conv.get_response(timeout=30, mark_read=True)
-												if "Wait" in msgs.text:
-													time.sleep(1)
-													msgs = await conv.get_response(timeout=30, mark_read=True)
-													if "Wait" in msgs.text:
-														time.sleep(1)
-														msgs = await conv.get_response(timeout=30, mark_read=True) 
-														if "Wait" in msgs.text:
-															time.sleep(1)
-															msgs = await conv.get_response(timeout=30, mark_read=True)  
-															if "Wait" in msgs.text:
-																time.sleep(1)
-																msgs = await conv.get_response(timeout=30, mark_read=True)  
-																if "Wait" in msgs.text:
-																	time.sleep(1)
-																	msgs = await conv.get_response(timeout=30, mark_read=True) 
-																	if "Wait" in msgs.text:
-																		time.sleep(1)
-																		msgs = await conv.get_response(timeout=30, mark_read=True) 
-																		if "Wait" in msgs.text:
-																			time.sleep(1)
-																			msgs = await conv.get_response(timeout=30, mark_read=True) 
-																			if "Wait" in msgs.text:
-																				time.sleep(1)
-																				msgs = await conv.get_response(timeout=30, mark_read=True) 
-																				if "Wait" in msgs.text:
-																					time.sleep(1)
-																					msgs = await conv.get_response(timeout=30, mark_read=True) 
-																					if "Wait" in msgs.text:
-																						time.sleep(1)
-																						msgs = await conv.get_response(timeout=30, mark_read=True) 
-																						if "Wait" in msgs.text:
-																							time.sleep(1)
-																							msgs = await conv.get_response(timeout=30, mark_read=True) 
+			msgs = await conv.get_response(timeout=40, mark_read=True)
 	except StopConversation:
 		pass 
 	try:
@@ -113,66 +53,12 @@ async def bin(message: Message):
 				await message.err(f"**{ERROR_MSG}**", del_in=5)
 				return 
 			msgs = await conv.get_response(timeout=30, mark_read=True)
-			if "Wait" in msgs.text:
+			if "Checking Bin." in msgs.text:
 				time.sleep(1)
 				msgs = await conv.get_response(timeout=30, mark_read=True) 
-				if "Wait" in msgs.text:
+				if "Waiting for result..." in msgs.text:
 					time.sleep(1)
 					msgs = await conv.get_response(timeout=30, mark_read=True) 
-					if "Wait" in msgs.text:
-						time.sleep(1)
-						msgs = await conv.get_response(timeout=30, mark_read=True) 
-						if "Wait" in msgs.text:
-							time.sleep(1)
-							msgs = await conv.get_response(timeout=30, mark_read=True)
-							if "Wait" in msgs.text:
-								time.sleep(1)
-								msgs = await conv.get_response(timeout=30, mark_read=True)
-								if "Wait" in msgs.text:
-									time.sleep(1)
-									msgs = await conv.get_response(timeout=30, mark_read=True)
-									if "Wait" in msgs.text:
-										time.sleep(1)
-										msgs = await conv.get_response(timeout=30, mark_read=True)
-										if "Wait" in msgs.text:
-											time.sleep(1)
-											msgs = await conv.get_response(timeout=30, mark_read=True)
-											if "Wait" in msgs.text:
-												time.sleep(1)
-												msgs = await conv.get_response(timeout=30, mark_read=True)
-												if "Wait" in msgs.text:
-													time.sleep(1)
-													msgs = await conv.get_response(timeout=30, mark_read=True)
-													if "Wait" in msgs.text:
-														time.sleep(1)
-														msgs = await conv.get_response(timeout=30, mark_read=True) 
-														if "Wait" in msgs.text:
-															time.sleep(1)
-															msgs = await conv.get_response(timeout=30, mark_read=True)  
-															if "Wait" in msgs.text:
-																time.sleep(1)
-																msgs = await conv.get_response(timeout=30, mark_read=True)  
-																if "Wait" in msgs.text:
-																	time.sleep(1)
-																	msgs = await conv.get_response(timeout=30, mark_read=True) 
-																	if "Wait" in msgs.text:
-																		time.sleep(1)
-																		msgs = await conv.get_response(timeout=30, mark_read=True) 
-																		if "Wait" in msgs.text:
-																			time.sleep(1)
-																			msgs = await conv.get_response(timeout=30, mark_read=True) 
-																			if "Wait" in msgs.text:
-																				time.sleep(1)
-																				msgs = await conv.get_response(timeout=30, mark_read=True) 
-																				if "Wait" in msgs.text:
-																					time.sleep(1)
-																					msgs = await conv.get_response(timeout=30, mark_read=True) 
-																					if "Wait" in msgs.text:
-																						time.sleep(1)
-																						msgs = await conv.get_response(timeout=30, mark_read=True) 
-																						if "Wait" in msgs.text:
-																							time.sleep(1)
-																							msgs = await conv.get_response(timeout=30, mark_read=True) 
 	except StopConversation:
 		pass 
 	try:
@@ -201,66 +87,9 @@ async def key(message: Message):
 				await message.err(f"**{ERROR_MSG}**", del_in=5)
 				return 
 			msgs = await conv.get_response(timeout=30, mark_read=True)
-			if "Wait" in msgs.text:
+			if "Generating..." in msgs.text:
 				time.sleep(1)
 				msgs = await conv.get_response(timeout=30, mark_read=True) 
-				if "Wait" in msgs.text:
-					time.sleep(1)
-					msgs = await conv.get_response(timeout=30, mark_read=True) 
-					if "Wait" in msgs.text:
-						time.sleep(1)
-						msgs = await conv.get_response(timeout=30, mark_read=True) 
-						if "Wait" in msgs.text:
-							time.sleep(1)
-							msgs = await conv.get_response(timeout=30, mark_read=True)
-							if "Wait" in msgs.text:
-								time.sleep(1)
-								msgs = await conv.get_response(timeout=30, mark_read=True)
-								if "Wait" in msgs.text:
-									time.sleep(1)
-									msgs = await conv.get_response(timeout=30, mark_read=True)
-									if "Wait" in msgs.text:
-										time.sleep(1)
-										msgs = await conv.get_response(timeout=30, mark_read=True)
-										if "Wait" in msgs.text:
-											time.sleep(1)
-											msgs = await conv.get_response(timeout=30, mark_read=True)
-											if "Wait" in msgs.text:
-												time.sleep(1)
-												msgs = await conv.get_response(timeout=30, mark_read=True)
-												if "Wait" in msgs.text:
-													time.sleep(1)
-													msgs = await conv.get_response(timeout=30, mark_read=True)
-													if "Wait" in msgs.text:
-														time.sleep(1)
-														msgs = await conv.get_response(timeout=30, mark_read=True) 
-														if "Wait" in msgs.text:
-															time.sleep(1)
-															msgs = await conv.get_response(timeout=30, mark_read=True)  
-															if "Wait" in msgs.text:
-																time.sleep(1)
-																msgs = await conv.get_response(timeout=30, mark_read=True)  
-																if "Wait" in msgs.text:
-																	time.sleep(1)
-																	msgs = await conv.get_response(timeout=30, mark_read=True) 
-																	if "Wait" in msgs.text:
-																		time.sleep(1)
-																		msgs = await conv.get_response(timeout=30, mark_read=True) 
-																		if "Wait" in msgs.text:
-																			time.sleep(1)
-																			msgs = await conv.get_response(timeout=30, mark_read=True) 
-																			if "Wait" in msgs.text:
-																				time.sleep(1)
-																				msgs = await conv.get_response(timeout=30, mark_read=True) 
-																				if "Wait" in msgs.text:
-																					time.sleep(1)
-																					msgs = await conv.get_response(timeout=30, mark_read=True) 
-																					if "Wait" in msgs.text:
-																						time.sleep(1)
-																						msgs = await conv.get_response(timeout=30, mark_read=True) 
-																						if "Wait" in msgs.text:
-																							time.sleep(1)
-																							msgs = await conv.get_response(timeout=30, mark_read=True) 
 	except StopConversation:
 		pass 
 	try:
@@ -289,66 +118,12 @@ async def key(message: Message):
 				await message.err(f"**{ERROR_MSG}**", del_in=5)
 				return 
 			msgs = await conv.get_response(timeout=30, mark_read=True)
-			if "Wait" in msgs.text:
+			if "Checking.." in msgs.text:
 				time.sleep(1)
 				msgs = await conv.get_response(timeout=30, mark_read=True) 
-				if "Wait" in msgs.text:
+				if "Waiting for result..." in msgs.text:
 					time.sleep(1)
-					msgs = await conv.get_response(timeout=30, mark_read=True) 
-					if "Wait" in msgs.text:
-						time.sleep(1)
-						msgs = await conv.get_response(timeout=30, mark_read=True) 
-						if "Wait" in msgs.text:
-							time.sleep(1)
-							msgs = await conv.get_response(timeout=30, mark_read=True)
-							if "Wait" in msgs.text:
-								time.sleep(1)
-								msgs = await conv.get_response(timeout=30, mark_read=True)
-								if "Wait" in msgs.text:
-									time.sleep(1)
-									msgs = await conv.get_response(timeout=30, mark_read=True)
-									if "Wait" in msgs.text:
-										time.sleep(1)
-										msgs = await conv.get_response(timeout=30, mark_read=True)
-										if "Wait" in msgs.text:
-											time.sleep(1)
-											msgs = await conv.get_response(timeout=30, mark_read=True)
-											if "Wait" in msgs.text:
-												time.sleep(1)
-												msgs = await conv.get_response(timeout=30, mark_read=True)
-												if "Wait" in msgs.text:
-													time.sleep(1)
-													msgs = await conv.get_response(timeout=30, mark_read=True)
-													if "Wait" in msgs.text:
-														time.sleep(1)
-														msgs = await conv.get_response(timeout=30, mark_read=True) 
-														if "Wait" in msgs.text:
-															time.sleep(1)
-															msgs = await conv.get_response(timeout=30, mark_read=True)  
-															if "Wait" in msgs.text:
-																time.sleep(1)
-																msgs = await conv.get_response(timeout=30, mark_read=True)  
-																if "Wait" in msgs.text:
-																	time.sleep(1)
-																	msgs = await conv.get_response(timeout=30, mark_read=True) 
-																	if "Wait" in msgs.text:
-																		time.sleep(1)
-																		msgs = await conv.get_response(timeout=30, mark_read=True) 
-																		if "Wait" in msgs.text:
-																			time.sleep(1)
-																			msgs = await conv.get_response(timeout=30, mark_read=True) 
-																			if "Wait" in msgs.text:
-																				time.sleep(1)
-																				msgs = await conv.get_response(timeout=30, mark_read=True) 
-																				if "Wait" in msgs.text:
-																					time.sleep(1)
-																					msgs = await conv.get_response(timeout=30, mark_read=True) 
-																					if "Wait" in msgs.text:
-																						time.sleep(1)
-																						msgs = await conv.get_response(timeout=30, mark_read=True) 
-																						if "Wait" in msgs.text:
-																							time.sleep(1)
-																							msgs = await conv.get_response(timeout=30, mark_read=True) 
+					msgs = await conv.get_response(timeout=30, mark_read=True)
 	except StopConversation:
 		pass 
 	try:
@@ -377,66 +152,6 @@ async def key(message: Message):
 				await message.err(f"**{ERROR_MSG}**", del_in=5)
 				return 
 			msgs = await conv.get_response(timeout=30, mark_read=True)
-			if "Wait" in msgs.text:
-				time.sleep(1)
-				msgs = await conv.get_response(timeout=30, mark_read=True) 
-				if "Wait" in msgs.text:
-					time.sleep(1)
-					msgs = await conv.get_response(timeout=30, mark_read=True) 
-					if "Wait" in msgs.text:
-						time.sleep(1)
-						msgs = await conv.get_response(timeout=30, mark_read=True) 
-						if "Wait" in msgs.text:
-							time.sleep(1)
-							msgs = await conv.get_response(timeout=30, mark_read=True)
-							if "Wait" in msgs.text:
-								time.sleep(1)
-								msgs = await conv.get_response(timeout=30, mark_read=True)
-								if "Wait" in msgs.text:
-									time.sleep(1)
-									msgs = await conv.get_response(timeout=30, mark_read=True)
-									if "Wait" in msgs.text:
-										time.sleep(1)
-										msgs = await conv.get_response(timeout=30, mark_read=True)
-										if "Wait" in msgs.text:
-											time.sleep(1)
-											msgs = await conv.get_response(timeout=30, mark_read=True)
-											if "Wait" in msgs.text:
-												time.sleep(1)
-												msgs = await conv.get_response(timeout=30, mark_read=True)
-												if "Wait" in msgs.text:
-													time.sleep(1)
-													msgs = await conv.get_response(timeout=30, mark_read=True)
-													if "Wait" in msgs.text:
-														time.sleep(1)
-														msgs = await conv.get_response(timeout=30, mark_read=True) 
-														if "Wait" in msgs.text:
-															time.sleep(1)
-															msgs = await conv.get_response(timeout=30, mark_read=True)  
-															if "Wait" in msgs.text:
-																time.sleep(1)
-																msgs = await conv.get_response(timeout=30, mark_read=True)  
-																if "Wait" in msgs.text:
-																	time.sleep(1)
-																	msgs = await conv.get_response(timeout=30, mark_read=True) 
-																	if "Wait" in msgs.text:
-																		time.sleep(1)
-																		msgs = await conv.get_response(timeout=30, mark_read=True) 
-																		if "Wait" in msgs.text:
-																			time.sleep(1)
-																			msgs = await conv.get_response(timeout=30, mark_read=True) 
-																			if "Wait" in msgs.text:
-																				time.sleep(1)
-																				msgs = await conv.get_response(timeout=30, mark_read=True) 
-																				if "Wait" in msgs.text:
-																					time.sleep(1)
-																					msgs = await conv.get_response(timeout=30, mark_read=True) 
-																					if "Wait" in msgs.text:
-																						time.sleep(1)
-																						msgs = await conv.get_response(timeout=30, mark_read=True) 
-																						if "Wait" in msgs.text:
-																							time.sleep(1)
-																							msgs = await conv.get_response(timeout=30, mark_read=True) 
 	except StopConversation:
 		pass 
 	try:
