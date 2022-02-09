@@ -24,7 +24,67 @@ async def gen(message: Message):
 			except YouBlockedUser:
 				await message.err(f"**{ERROR_MSG}**", del_in=5)
 				return 
-			msgs = await conv.get_response(timeout=40, mark_read=True)
+			msgs = await conv.get_response(timeout=30, mark_read=True)
+			if "Wait" in msgs.text:
+				time.sleep(1)
+				msgs = await conv.get_response(timeout=30, mark_read=True) 
+				if "Wait" in msgs.text:
+					time.sleep(1)
+					msgs = await conv.get_response(timeout=30, mark_read=True) 
+					if "Wait" in msgs.text:
+						time.sleep(1)
+						msgs = await conv.get_response(timeout=30, mark_read=True) 
+						if "Wait" in msgs.text:
+							time.sleep(1)
+							msgs = await conv.get_response(timeout=30, mark_read=True)
+							if "Wait" in msgs.text:
+								time.sleep(1)
+								msgs = await conv.get_response(timeout=30, mark_read=True)
+								if "Wait" in msgs.text:
+									time.sleep(1)
+									msgs = await conv.get_response(timeout=30, mark_read=True)
+									if "Wait" in msgs.text:
+										time.sleep(1)
+										msgs = await conv.get_response(timeout=30, mark_read=True)
+										if "Wait" in msgs.text:
+											time.sleep(1)
+											msgs = await conv.get_response(timeout=30, mark_read=True)
+											if "Wait" in msgs.text:
+												time.sleep(1)
+												msgs = await conv.get_response(timeout=30, mark_read=True)
+												if "Wait" in msgs.text:
+													time.sleep(1)
+													msgs = await conv.get_response(timeout=30, mark_read=True)
+													if "Wait" in msgs.text:
+														time.sleep(1)
+														msgs = await conv.get_response(timeout=30, mark_read=True) 
+														if "Wait" in msgs.text:
+															time.sleep(1)
+															msgs = await conv.get_response(timeout=30, mark_read=True)  
+															if "Wait" in msgs.text:
+																time.sleep(1)
+																msgs = await conv.get_response(timeout=30, mark_read=True)  
+																if "Wait" in msgs.text:
+																	time.sleep(1)
+																	msgs = await conv.get_response(timeout=30, mark_read=True) 
+																	if "Wait" in msgs.text:
+																		time.sleep(1)
+																		msgs = await conv.get_response(timeout=30, mark_read=True) 
+																		if "Wait" in msgs.text:
+																			time.sleep(1)
+																			msgs = await conv.get_response(timeout=30, mark_read=True) 
+																			if "Wait" in msgs.text:
+																				time.sleep(1)
+																				msgs = await conv.get_response(timeout=30, mark_read=True) 
+																				if "Wait" in msgs.text:
+																					time.sleep(1)
+																					msgs = await conv.get_response(timeout=30, mark_read=True) 
+																					if "Wait" in msgs.text:
+																						time.sleep(1)
+																						msgs = await conv.get_response(timeout=30, mark_read=True) 
+																						if "Wait" in msgs.text:
+																							time.sleep(1)
+																							msgs = await conv.get_response(timeout=30, mark_read=True) 
 	except StopConversation:
 		pass 
 	try:
@@ -70,7 +130,7 @@ async def bin(message: Message):
 #fake
 @userge.on_cmd("fake", about={
 	'header': "Generate Fake Address",
-	'usage': "{tr}bin [Input Country Code]\n"})
+	'usage': "{tr}fake [Input Country Code]\n"})
 	
 async def key(message: Message):
 	"""Generate Fake Address"""
